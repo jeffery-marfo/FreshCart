@@ -1,6 +1,9 @@
 # Design Deliverable — Containerizing FreshCart
 
-Diagrams: [`layer-diagram.svg`](./layer-diagram.svg) · [`topology-diagram.svg`](./topology-diagram.svg)
+Diagrams: <img width="1508" height="701" alt="topology-diagram drawio" src="https://github.com/user-attachments/assets/c20ae996-9df8-40d8-b82e-b6cf57e1565c" />
+<img width="1540" height="992" alt="layer-diagram drawio" src="https://github.com/user-attachments/assets/d7cd445e-1a59-4f33-be53-86eeb3f3e9b5" />
+
+
 
 ## Base image choice
 
