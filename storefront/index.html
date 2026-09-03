@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreshCart</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>🛒 FreshCart</h1>
+      <p>Groceries, delivered. (This week's build target, not a real store.)</p>
+    </header>
+
+    <main>
+      <section class="toolbar">
+        <input id="search" type="search" placeholder="Search products…" aria-label="Search products" />
+      </section>
+
+      <section id="status" class="status" hidden></section>
+
+      <section id="products" class="product-grid" aria-live="polite"></section>
+    </main>
+
+    <dialog id="checkout-dialog">
+      <form id="checkout-form" method="dialog">
+        <h2>Checkout</h2>
+        <p id="checkout-product-name"></p>
+        <label>
+          Quantity
+          <input id="checkout-quantity" type="number" min="1" value="1" required />
+        </label>
+        <label>
+          Name
+          <input id="checkout-name" type="text" required />
+        </label>
+        <label>
+          Email
+          <input id="checkout-email" type="email" required />
+        </label>
+        <div class="dialog-actions">
+          <button type="button" id="checkout-cancel">Cancel</button>
+          <button type="submit" id="checkout-submit">Place order</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+name: freshcart
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: freshcart
+      POSTGRES_PASSWORD: freshcart
+      POSTGRES_DB: freshcart
+    volumes:
+      # Named volume: Postgres's actual data files (PGDATA) live here, and
+      # survive container restarts/recreates. This is the ONE thing in this
+      # stack that has to be stateful — the app containers are disposable
+      # and get rebuilt from source; the database's data must not be.
+      - db-data:/var/lib/postgresql/data
+      # Postgres's official image auto-runs any .sql/.sh dropped in
+      # /docker-entrypoint-initdb.d/ the first time it initializes an empty
+      # data directory. Mounted read-only: this is a one-shot seed script,
+      # not something the running container should ever write back to.
+      - ./checkout-api/db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    networks:
+      - freshcart-net
+    ports:
+      # Exposed to the host only for local debugging (psql, a GUI client).
+      # checkout-api reaches this over the internal network below, not this
+      # published port.
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U freshcart -d freshcart"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  checkout-api:
+    build:
+      context: ./checkout-api
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      # Service name "db" resolves via Docker's embedded DNS on the shared
+      # network — no hardcoded IPs, no host networking.
+      DATABASE_URL: postgres://freshcart:freshcart@db:5432/freshcart
+      PORT: "3000"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - freshcart-net
+    ports:
+      - "3000:3000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://127.0.0.1:3000/healthz', r => process.exit(r.statusCode===200?0:1)).on('error', () => process.exit(1))"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+
+  storefront:
+    build:
+      context: ./storefront
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      checkout-api:
+        condition: service_healthy
+    networks:
+      - freshcart-net
+    ports:
+      - "8080:8080"
+
+networks:
+  # Explicit bridge network so all three containers can reach each other by
+  # service name and are isolated from other compose projects/containers on
+  # the host.
+  freshcart-net:
+    driver: bridge
+
+volumes:
+  # Named + managed by Docker (not a bind mount): survives `docker compose
+  # down`, gets removed only with an explicit `docker compose down -v`.
+  # This is what makes the stretch-goal demo (kill the db container,
+  # bring it back, data is still there) possible.
+  db-data:

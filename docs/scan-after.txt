@@ -1,0 +1,181 @@
+
+
+## Overview
+
+                   │              Analyzed Image               
+───────────────────┼───────────────────────────────────────────
+ Target            │  jefftheson/freshcart-checkout-api:1.0.2  
+   digest          │  63da2eeb21c6                             
+   platform        │ linux/amd64                               
+   vulnerabilities │    3C    15H     8M     2L                
+   size            │ 50 MB                                     
+   packages        │ 109                                       
+
+
+## Packages and Vulnerabilities
+
+   3C    15H     5M     2L  openssl 3.5.6-r0
+pkg:apk/alpine/openssl@3.5.6-r0?os_name=alpine&os_version=3.23
+
+    x CRITICAL CVE-2026-63073
+      https://scout.docker.com/v/CVE-2026-63073?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x CRITICAL CVE-2026-75803
+      https://scout.docker.com/v/CVE-2026-75803?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x CRITICAL CVE-2026-34182
+      https://scout.docker.com/v/CVE-2026-34182?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x HIGH CVE-2026-45447
+      https://scout.docker.com/v/CVE-2026-45447?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x HIGH CVE-2026-7383
+      https://scout.docker.com/v/CVE-2026-7383?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x HIGH CVE-2026-9076
+      https://scout.docker.com/v/CVE-2026-9076?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x HIGH CVE-2026-63076
+      https://scout.docker.com/v/CVE-2026-63076?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x HIGH CVE-2026-63075
+      https://scout.docker.com/v/CVE-2026-63075?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x HIGH CVE-2026-63072
+      https://scout.docker.com/v/CVE-2026-63072?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x HIGH CVE-2026-54874
+      https://scout.docker.com/v/CVE-2026-54874?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x HIGH CVE-2026-45445
+      https://scout.docker.com/v/CVE-2026-45445?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x HIGH CVE-2026-42764
+      https://scout.docker.com/v/CVE-2026-42764?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x HIGH CVE-2026-34183
+      https://scout.docker.com/v/CVE-2026-34183?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x HIGH CVE-2026-34180
+      https://scout.docker.com/v/CVE-2026-34180?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x HIGH CVE-2026-18798
+      https://scout.docker.com/v/CVE-2026-18798?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x HIGH CVE-2026-14457
+      https://scout.docker.com/v/CVE-2026-14457?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x HIGH CVE-2026-14456
+      https://scout.docker.com/v/CVE-2026-14456?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x HIGH CVE-2026-34181
+      https://scout.docker.com/v/CVE-2026-34181?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x MEDIUM CVE-2026-63074
+      https://scout.docker.com/v/CVE-2026-63074?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x MEDIUM CVE-2026-42767
+      https://scout.docker.com/v/CVE-2026-42767?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x MEDIUM CVE-2026-42766
+      https://scout.docker.com/v/CVE-2026-42766?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x MEDIUM CVE-2026-42769
+      https://scout.docker.com/v/CVE-2026-42769?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x MEDIUM CVE-2026-45446
+      https://scout.docker.com/v/CVE-2026-45446?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x LOW CVE-2026-42770
+      https://scout.docker.com/v/CVE-2026-42770?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x LOW CVE-2026-42768
+      https://scout.docker.com/v/CVE-2026-42768?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+
+   0C     0H     2M     0L  qs 6.15.3
+pkg:npm/qs@6.15.3
+
+    x MEDIUM CVE-2026-82562 [Allocation of Resources Without Limits or Throttling]
+      https://scout.docker.com/v/CVE-2026-82562?s=github&n=qs&t=npm&vr=%3E%3D6.14.2%2C%3C%3D6.15.3
+      Affected range : >=6.14.2                                                        
+                     : <=6.15.3                                                        
+      Fixed version  : 6.16.0                                                          
+      CVSS Score     : 6.3                                                             
+      CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N 
+    
+    x MEDIUM CVE-2026-82417 [Uncaught Exception]
+      https://scout.docker.com/v/CVE-2026-82417?s=github&n=qs&t=npm&vr=%3E%3D2.2.5%2C%3C6.16.0
+      Affected range : >=2.2.5                                                         
+                     : <6.16.0                                                         
+      Fixed version  : 6.16.0                                                          
+      CVSS Score     : 6.3                                                             
+      CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N 
+    
+
+   0C     0H     1M     0L  busybox 1.37.0-r30
+pkg:apk/alpine/busybox@1.37.0-r30?os_name=alpine&os_version=3.23
+
+    x MEDIUM CVE-2025-60876
+      https://scout.docker.com/v/CVE-2025-60876?s=alpine&n=busybox&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C%3D1.37.0-r30
+      Affected range : <=1.37.0-r30 
+      Fixed version  : not fixed    
+    
+
+
+28 vulnerabilities found in 3 packages
+  CRITICAL  3  
+  HIGH      15 
+  MEDIUM    8  
+  LOW       2  
+
