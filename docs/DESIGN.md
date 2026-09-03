@@ -28,6 +28,8 @@ every time. I verified this directly — see the before/after numbers in the blo
 The same pattern is repeated in `checkout-api`'s final stage (deps installed before
 `COPY --from=build`) so that stage benefits from the same caching, not just the build
 stage.
+<img width="450" height="173" alt="time docker compose build checkout-api3" src="https://github.com/user-attachments/assets/e041cbd2-81cd-4ef2-acaa-22561ad24bea" />
+
 
 ## Multi-stage builds
 
