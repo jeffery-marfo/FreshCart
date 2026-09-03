@@ -1,9 +1,6 @@
 # Design Deliverable — Containerizing FreshCart
 
-Diagrams: <img width="1508" height="701" alt="topology-diagram drawio" src="https://github.com/user-attachments/assets/c20ae996-9df8-40d8-b82e-b6cf57e1565c" />
-<img width="1540" height="992" alt="layer-diagram drawio" src="https://github.com/user-attachments/assets/d7cd445e-1a59-4f33-be53-86eeb3f3e9b5" />
-
-
+Diagrams: [`layer-diagram.png`](./layer-diagram.png) · [`topology-diagram.png`](./topology-diagram.png) (editable source: [`layer-diagram.drawio`](./layer-diagram.drawio) · [`topology-diagram.drawio`](./topology-diagram.drawio))
 
 ## Base image choice
 
@@ -82,18 +79,42 @@ image.
 
 ## Vulnerability scan: what I found and what I did
 
-*(Fill in with your actual `trivy image` or `docker scout cves` output — see
-`docs/scan-before.txt` and `docs/scan-after.txt`. Template below.)*
+I scanned `jefftheson/freshcart-checkout-api:1.0.0` with Docker Scout
+(`docker scout cves ...`). It flagged **57 vulnerabilities across 14 packages** — 4
+CRITICAL, 34 HIGH, 14 MEDIUM, 5 LOW.
 
-Scanning `checkout-api:1.0.0` with Trivy surfaced `<N>` vulnerabilities, `<N>` of them
-HIGH/CRITICAL, mostly in `<base image / package>`. I addressed this by
-`<pinning node:20-alpine to a specific digest that included the patched package /
-upgrading X in package.json / removing an unused dependency that pulled in Y>`.
-Re-scanning after the fix brought HIGH/CRITICAL findings down from `<N>` to `<N>`.
+Looking at the actual package list, the large majority weren't in anything I control
+directly. `checkout-api` depends on exactly two runtime packages — `express` and
+`pg`. Everything else the scanner flagged (`tar`, `minimatch`, `glob`, `pacote`,
+`sigstore`, `@sigstore/core`, `cross-spawn`, `brace-expansion`) turned out to be
+internal packages bundled inside the **npm CLI itself**, which `node:20-alpine`
+installs globally so `npm ci` can run during the build. The final image never invokes
+`npm` at runtime — the container's entrypoint is `node dist/index.js` — so that tooling
+was sitting in the shipped image without ever being used.
 
-The remaining `<N>` findings are `<describe: e.g. "in glibc-compat tooling only present
-in the build stage, which never ships in the final image">` — I'm treating these as
-acceptable for this context because `<reasoning: e.g. they don't reach the final image,
-or they require local shell access we've already removed via the non-root user, or
-there's no patched version available upstream yet and the affected code path (X) isn't
-exercised by this app>`.
+I fixed this by removing the npm CLI (and everything bundled inside it) from the final
+stage, right after using it to install production dependencies:
+
+```dockerfile
+RUN npm ci --omit=dev && npm cache clean --force && \
+    rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx /usr/local/bin/corepack
+```
+
+I rebuilt, re-tagged as `1.0.2`, pushed, and re-scanned. Confirmed the app still worked
+correctly first (`docker compose ps` all healthy, `/healthz` and `/api/products` both
+responding normally) — removing npm doesn't touch anything the app actually calls.
+Result: **28 vulnerabilities across 3 packages** — 3 CRITICAL, 15 HIGH, 8 MEDIUM, 2 LOW.
+That's a reduction of more than half the total count and roughly 79% of the affected
+packages (14 → 3), without changing a single line of application code.
+
+The remaining findings are all in **openssl**, part of the Alpine OS layer inside
+`node:20-alpine` itself — not something reachable by editing `package.json` or the
+Dockerfile's `COPY`/`RUN` steps. I confirmed this wasn't something I could fix by simply
+re-pulling the base image (`docker pull node:20-alpine` followed by a `--no-cache`
+rebuild produced an identical scan result), which means the currently-published
+`node:20-alpine` tag on Docker Hub hasn't picked up a patched OpenSSL build yet. I'm
+treating this as an accepted risk for this project rather than something to hand-patch:
+the fix path here is upstream (waiting for a new Alpine/OpenSSL release to land in the
+official `node:20-alpine` image, or pinning to a `distroless`/different base with a
+newer OpenSSL build), not something this Dockerfile's structure can solve on its own.
+
