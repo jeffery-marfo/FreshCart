@@ -1,0 +1,441 @@
+
+
+## Overview
+
+                   │              Analyzed Image               
+───────────────────┼───────────────────────────────────────────
+ Target            │  jefftheson/freshcart-checkout-api:1.0.0  
+   digest          │  de0957d232b9                             
+   platform        │ linux/amd64                               
+   vulnerabilities │    4C    34H    14M     5L                
+   size            │ 50 MB                                     
+   packages        │ 297                                       
+
+
+## Packages and Vulnerabilities
+
+   3C    15H     5M     2L  openssl 3.5.6-r0
+pkg:apk/alpine/openssl@3.5.6-r0?os_name=alpine&os_version=3.23
+
+    x CRITICAL CVE-2026-63073
+      https://scout.docker.com/v/CVE-2026-63073?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x CRITICAL CVE-2026-75803
+      https://scout.docker.com/v/CVE-2026-75803?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x CRITICAL CVE-2026-34182
+      https://scout.docker.com/v/CVE-2026-34182?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x HIGH CVE-2026-45447
+      https://scout.docker.com/v/CVE-2026-45447?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x HIGH CVE-2026-7383
+      https://scout.docker.com/v/CVE-2026-7383?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x HIGH CVE-2026-9076
+      https://scout.docker.com/v/CVE-2026-9076?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x HIGH CVE-2026-63076
+      https://scout.docker.com/v/CVE-2026-63076?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x HIGH CVE-2026-63075
+      https://scout.docker.com/v/CVE-2026-63075?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x HIGH CVE-2026-63072
+      https://scout.docker.com/v/CVE-2026-63072?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x HIGH CVE-2026-54874
+      https://scout.docker.com/v/CVE-2026-54874?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x HIGH CVE-2026-45445
+      https://scout.docker.com/v/CVE-2026-45445?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x HIGH CVE-2026-42764
+      https://scout.docker.com/v/CVE-2026-42764?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x HIGH CVE-2026-34183
+      https://scout.docker.com/v/CVE-2026-34183?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x HIGH CVE-2026-34180
+      https://scout.docker.com/v/CVE-2026-34180?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x HIGH CVE-2026-18798
+      https://scout.docker.com/v/CVE-2026-18798?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x HIGH CVE-2026-14457
+      https://scout.docker.com/v/CVE-2026-14457?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x HIGH CVE-2026-14456
+      https://scout.docker.com/v/CVE-2026-14456?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x HIGH CVE-2026-34181
+      https://scout.docker.com/v/CVE-2026-34181?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x MEDIUM CVE-2026-63074
+      https://scout.docker.com/v/CVE-2026-63074?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.8-r0
+      Affected range : <3.5.8-r0 
+      Fixed version  : 3.5.8-r0  
+    
+    x MEDIUM CVE-2026-42767
+      https://scout.docker.com/v/CVE-2026-42767?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x MEDIUM CVE-2026-42766
+      https://scout.docker.com/v/CVE-2026-42766?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x MEDIUM CVE-2026-42769
+      https://scout.docker.com/v/CVE-2026-42769?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x MEDIUM CVE-2026-45446
+      https://scout.docker.com/v/CVE-2026-45446?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x LOW CVE-2026-42770
+      https://scout.docker.com/v/CVE-2026-42770?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+    x LOW CVE-2026-42768
+      https://scout.docker.com/v/CVE-2026-42768?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C3.5.7-r0
+      Affected range : <3.5.7-r0 
+      Fixed version  : 3.5.7-r0  
+    
+
+   1C     8H     3M     0L  tar 6.2.1
+pkg:npm/tar@6.2.1
+
+    x CRITICAL CVE-2026-59873 [Allocation of Resources Without Limits or Throttling]
+      https://scout.docker.com/v/CVE-2026-59873?s=github&n=tar&t=npm&vr=%3C%3D7.5.18
+      Affected range : <=7.5.18                                                        
+      Fixed version  : 7.5.19                                                          
+      CVSS Score     : 9.2                                                             
+      CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H 
+    
+    x HIGH CVE-2026-23950 [Improper Handling of Unicode Encoding]
+      https://scout.docker.com/v/CVE-2026-23950?s=github&n=tar&t=npm&vr=%3C%3D7.5.3
+      Affected range : <=7.5.3                                      
+      Fixed version  : 7.5.4                                        
+      CVSS Score     : 8.8                                          
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:L 
+    
+    x HIGH CVE-2026-59874 [Loop with Unreachable Exit Condition ('Infinite Loop')]
+      https://scout.docker.com/v/CVE-2026-59874?s=github&n=tar&t=npm&vr=%3C%3D7.5.17
+      Affected range : <=7.5.17                                                        
+      Fixed version  : 7.5.18                                                          
+      CVSS Score     : 8.7                                                             
+      CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N 
+    
+    x HIGH CVE-2026-31802 [Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')]
+      https://scout.docker.com/v/CVE-2026-31802?s=github&n=tar&t=npm&vr=%3C%3D7.5.10
+      Affected range : <=7.5.10                                                        
+      Fixed version  : 7.5.11                                                          
+      CVSS Score     : 8.2                                                             
+      CVSS Vector    : CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:H/SA:N 
+    
+    x HIGH CVE-2026-29786 [Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')]
+      https://scout.docker.com/v/CVE-2026-29786?s=github&n=tar&t=npm&vr=%3C%3D7.5.9
+      Affected range : <=7.5.9                                                         
+      Fixed version  : 7.5.10                                                          
+      CVSS Score     : 8.2                                                             
+      CVSS Vector    : CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:H/VA:L/SC:N/SI:H/SA:L 
+    
+    x HIGH CVE-2026-24842 [Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')]
+      https://scout.docker.com/v/CVE-2026-24842?s=github&n=tar&t=npm&vr=%3C7.5.7
+      Affected range : <7.5.7                                       
+      Fixed version  : 7.5.7                                        
+      CVSS Score     : 8.2                                          
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N 
+    
+    x HIGH CVE-2026-23745 [Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')]
+      https://scout.docker.com/v/CVE-2026-23745?s=github&n=tar&t=npm&vr=%3C%3D7.5.2
+      Affected range : <=7.5.2                                                         
+      Fixed version  : 7.5.3                                                           
+      CVSS Score     : 8.2                                                             
+      CVSS Vector    : CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:L/VA:N/SC:H/SI:L/SA:N 
+    
+    x HIGH CVE-2026-73566 [Uncontrolled Resource Consumption]
+      https://scout.docker.com/v/CVE-2026-73566?s=github&n=tar&t=npm&vr=%3C%3D7.5.20
+      Affected range : <=7.5.20                                     
+      Fixed version  : 7.5.21                                       
+      CVSS Score     : 7.5                                          
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
+    
+    x HIGH CVE-2026-26960 [Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')]
+      https://scout.docker.com/v/CVE-2026-26960?s=github&n=tar&t=npm&vr=%3C7.5.8
+      Affected range : <7.5.8                                       
+      Fixed version  : 7.5.8                                        
+      CVSS Score     : 7.1                                          
+      CVSS Vector    : CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N 
+    
+    x MEDIUM CVE-2026-53655 [Interpretation Conflict]
+      https://scout.docker.com/v/CVE-2026-53655?s=github&n=tar&t=npm&vr=%3C%3D7.5.15
+      Affected range : <=7.5.15                                                        
+      Fixed version  : 7.5.16                                                          
+      CVSS Score     : 6.9                                                             
+      CVSS Vector    : CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N 
+    
+    x MEDIUM CVE-2026-59875 [Uncaught Exception]
+      https://scout.docker.com/v/CVE-2026-59875?s=github&n=tar&t=npm&vr=%3C%3D7.5.16
+      Affected range : <=7.5.16                                     
+      Fixed version  : 7.5.17                                       
+      CVSS Score     : 5.3                                          
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L 
+    
+    x MEDIUM CVE-2026-59871 [Incorrect Type Conversion or Cast]
+      https://scout.docker.com/v/CVE-2026-59871?s=github&n=tar&t=npm&vr=%3C%3D7.5.17
+      Affected range : <=7.5.17                                     
+      Fixed version  : 7.5.18                                       
+      CVSS Score     : 5.3                                          
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L 
+    
+
+   0C     3H     1M     1L  brace-expansion 2.0.1
+pkg:npm/brace-expansion@2.0.1
+
+    x HIGH CVE-2026-13149 [Uncontrolled Resource Consumption]
+      https://scout.docker.com/v/CVE-2026-13149?s=github&n=brace-expansion&t=npm&vr=%3E%3D2.0.0%2C%3C2.1.2
+      Affected range : >=2.0.0                                                                                           
+                     : <2.1.2                                                                                            
+      Fixed version  : 2.1.2                                                                                             
+      CVSS Score     : 7.7                                                                                               
+      CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P/S:N/AU:Y/R:U/V:D/RE:M/U:Amber 
+    
+    x HIGH CVE-2026-69152 [Uncontrolled Resource Consumption]
+      https://scout.docker.com/v/CVE-2026-69152?s=github&n=brace-expansion&t=npm&vr=%3E%3D2.0.0%2C%3C2.1.4
+      Affected range : >=2.0.0                                      
+                     : <2.1.4                                       
+      Fixed version  : 2.1.4                                        
+      CVSS Score     : 7.5                                          
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
+    
+    x HIGH CVE-2026-14257 [Uncontrolled Resource Consumption]
+      https://scout.docker.com/v/CVE-2026-14257?s=github&n=brace-expansion&t=npm&vr=%3E%3D2.0.0%2C%3C2.1.3
+      Affected range : >=2.0.0                                      
+                     : <2.1.3                                       
+      Fixed version  : 5.0.8                                        
+      CVSS Score     : 7.5                                          
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
+    
+    x MEDIUM CVE-2026-33750 [Uncontrolled Resource Consumption]
+      https://scout.docker.com/v/CVE-2026-33750?s=github&n=brace-expansion&t=npm&vr=%3E%3D2.0.0%2C%3C2.0.3
+      Affected range : >=2.0.0                                      
+                     : <2.0.3                                       
+      Fixed version  : 5.0.5                                        
+      CVSS Score     : 6.5                                          
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H 
+    
+    x LOW CVE-2025-5889 [Uncontrolled Resource Consumption]
+      https://scout.docker.com/v/CVE-2025-5889?s=github&n=brace-expansion&t=npm&vr=%3E%3D2.0.0%2C%3C%3D2.0.1
+      Affected range : >=2.0.0                                                             
+                     : <=2.0.1                                                             
+      Fixed version  : 2.0.2                                                               
+      CVSS Score     : 1.3                                                                 
+      CVSS Vector    : CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P 
+    
+
+   0C     3H     0M     0L  minimatch 9.0.5
+pkg:npm/minimatch@9.0.5
+
+    x HIGH CVE-2026-26996 [Inefficient Regular Expression Complexity]
+      https://scout.docker.com/v/CVE-2026-26996?s=github&n=minimatch&t=npm&vr=%3E%3D9.0.0%2C%3C9.0.6
+      Affected range : >=9.0.0                                                         
+                     : <9.0.6                                                          
+      Fixed version  : 10.2.1                                                          
+      CVSS Score     : 8.7                                                             
+      CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N 
+    
+    x HIGH CVE-2026-27904 [Inefficient Regular Expression Complexity]
+      https://scout.docker.com/v/CVE-2026-27904?s=github&n=minimatch&t=npm&vr=%3E%3D9.0.0%2C%3C9.0.7
+      Affected range : >=9.0.0                                      
+                     : <9.0.7                                       
+      Fixed version  : 9.0.7                                        
+      CVSS Score     : 7.5                                          
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
+    
+    x HIGH CVE-2026-27903 [Inefficient Algorithmic Complexity]
+      https://scout.docker.com/v/CVE-2026-27903?s=github&n=minimatch&t=npm&vr=%3E%3D9.0.0%2C%3C9.0.7
+      Affected range : >=9.0.0                                      
+                     : <9.0.7                                       
+      Fixed version  : 9.0.7                                        
+      CVSS Score     : 7.5                                          
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 
+    
+
+   0C     1H     1M     0L  ip-address 9.0.5
+pkg:npm/ip-address@9.0.5
+
+    x HIGH CVE-2026-69192 [Improper Input Validation]
+      https://scout.docker.com/v/CVE-2026-69192?s=github&n=ip-address&t=npm&vr=%3C%3D10.3.0
+      Affected range : <=10.3.0                                                        
+      Fixed version  : 10.3.1                                                          
+      CVSS Score     : 7.7                                                             
+      CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:H/SI:N/SA:N 
+    
+    x MEDIUM CVE-2026-42338 [Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')]
+      https://scout.docker.com/v/CVE-2026-42338?s=github&n=ip-address&t=npm&vr=%3C%3D10.1.0
+      Affected range : <=10.1.0                                                        
+      Fixed version  : 10.1.1                                                          
+      CVSS Score     : 5.3                                                             
+      CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N 
+    
+
+   0C     1H     0M     0L  glob 10.4.2
+pkg:npm/glob@10.4.2
+
+    x HIGH CVE-2025-64756 [Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')]
+      https://scout.docker.com/v/CVE-2025-64756?s=github&n=glob&t=npm&vr=%3E%3D10.2.0%2C%3C10.5.0
+      Affected range : >=10.2.0                                     
+                     : <10.5.0                                      
+      Fixed version  : 11.1.0                                       
+      CVSS Score     : 7.5                                          
+      CVSS Vector    : CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H 
+    
+
+   0C     1H     0M     0L  pacote 18.0.6
+pkg:npm/pacote@18.0.6
+
+    x HIGH CVE-2026-9496 [Inefficient Regular Expression Complexity]
+      https://scout.docker.com/v/CVE-2026-9496?s=github&n=pacote&t=npm&vr=%3E%3D11.2.7%2C%3C21.5.1
+      Affected range : >=11.2.7                                                            
+                     : <21.5.1                                                             
+      Fixed version  : 21.5.1                                                              
+      CVSS Score     : 7.7                                                                 
+      CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P 
+    
+
+   0C     1H     0M     0L  cross-spawn 7.0.3
+pkg:npm/cross-spawn@7.0.3
+
+    x HIGH CVE-2024-21538 [Inefficient Regular Expression Complexity]
+      https://scout.docker.com/v/CVE-2024-21538?s=github&n=cross-spawn&t=npm&vr=%3E%3D7.0.0%2C%3C7.0.5
+      Affected range : >=7.0.0                                                             
+                     : <7.0.5                                                              
+      Fixed version  : 7.0.5                                                               
+      CVSS Score     : 7.7                                                                 
+      CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P 
+    
+
+   0C     1H     0M     0L  sigstore 2.3.1
+pkg:npm/sigstore@2.3.1
+
+    x HIGH CVE-2026-48815 [Improper Verification of Cryptographic Signature]
+      https://scout.docker.com/v/CVE-2026-48815?s=github&n=sigstore&t=npm&vr=%3C%3D4.1.0
+      Affected range : <=4.1.0                                      
+      Fixed version  : 4.1.1                                        
+      CVSS Score     : 7.5                                          
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N 
+    
+
+   0C     0H     2M     0L  qs 6.15.3
+pkg:npm/qs@6.15.3
+
+    x MEDIUM CVE-2026-82562 [Allocation of Resources Without Limits or Throttling]
+      https://scout.docker.com/v/CVE-2026-82562?s=github&n=qs&t=npm&vr=%3E%3D6.14.2%2C%3C%3D6.15.3
+      Affected range : >=6.14.2                                                        
+                     : <=6.15.3                                                        
+      Fixed version  : 6.16.0                                                          
+      CVSS Score     : 6.3                                                             
+      CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N 
+    
+    x MEDIUM CVE-2026-82417 [Uncaught Exception]
+      https://scout.docker.com/v/CVE-2026-82417?s=github&n=qs&t=npm&vr=%3E%3D2.2.5%2C%3C6.16.0
+      Affected range : >=2.2.5                                                         
+                     : <6.16.0                                                         
+      Fixed version  : 6.16.0                                                          
+      CVSS Score     : 6.3                                                             
+      CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N 
+    
+
+   0C     0H     1M     0L  @sigstore/core 1.1.0
+pkg:npm/%40sigstore/core@1.1.0
+
+    x MEDIUM CVE-2026-48758 [Improper Verification of Cryptographic Signature]
+      https://scout.docker.com/v/CVE-2026-48758?s=github&n=core&ns=%40sigstore&t=npm&vr=%3C%3D3.2.0
+      Affected range : <=3.2.0                                      
+      Fixed version  : 3.2.1                                        
+      CVSS Score     : 5.4                                          
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L 
+    
+
+   0C     0H     1M     0L  busybox 1.37.0-r30
+pkg:apk/alpine/busybox@1.37.0-r30?os_name=alpine&os_version=3.23
+
+    x MEDIUM CVE-2025-60876
+      https://scout.docker.com/v/CVE-2025-60876?s=alpine&n=busybox&ns=alpine&t=apk&osn=alpine&osv=3.23&vr=%3C%3D1.37.0-r30
+      Affected range : <=1.37.0-r30 
+      Fixed version  : not fixed    
+    
+
+   0C     0H     0M     1L  diff 5.2.0
+pkg:npm/diff@5.2.0
+
+    x LOW CVE-2026-24001 [Inefficient Regular Expression Complexity]
+      https://scout.docker.com/v/CVE-2026-24001?s=github&n=diff&t=npm&vr=%3E%3D5.0.0%2C%3C5.2.2
+      Affected range : >=5.0.0                                                             
+                     : <5.2.2                                                              
+      Fixed version  : 5.2.2                                                               
+      CVSS Score     : 2.7                                                                 
+      CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U 
+    
+
+   0C     0H     0M     1L  postcss-selector-parser 6.1.0
+pkg:npm/postcss-selector-parser@6.1.0
+
+    x LOW CVE-2026-9358 [Improper Resource Shutdown or Release]
+      https://scout.docker.com/v/CVE-2026-9358?s=github&n=postcss-selector-parser&t=npm&vr=%3E%3D6.1.0%2C%3C6.1.3
+      Affected range : >=6.1.0                                                             
+                     : <6.1.3                                                              
+      Fixed version  : 6.1.3                                                               
+      CVSS Score     : 2.1                                                                 
+      CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P 
+    
+
+
+57 vulnerabilities found in 14 packages
+  CRITICAL  4  
+  HIGH      34 
+  MEDIUM    14 
+  LOW       5  
+
