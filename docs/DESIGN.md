@@ -29,6 +29,8 @@ The same pattern is repeated in `checkout-api`'s final stage (deps installed bef
 `COPY --from=build`) so that stage benefits from the same caching, not just the build
 stage.
 
+<img width="450" height="173" alt="time docker compose build checkout-api3" src="https://github.com/user-attachments/assets/35b92d95-6630-4222-aa6a-88e8ffcdf88d" />
+
 ## Multi-stage builds
 
 Each Dockerfile has a `build` stage (full Node toolchain: TypeScript compiler, Vite,
@@ -81,7 +83,9 @@ image.
 
 I scanned `jefftheson/freshcart-checkout-api:1.0.0` with Docker Scout
 (`docker scout cves ...`). It flagged **57 vulnerabilities across 14 packages** — 4
-CRITICAL, 34 HIGH, 14 MEDIUM, 5 LOW.
+CRITICAL, 34 HIGH, 14 MEDIUM, 5 LOW. 
+<img width="1349" height="167" alt="Vulnerabilities Before" src="https://github.com/user-attachments/assets/de9e51e0-230c-4d0c-8109-2d808af299b4" />
+
 
 Looking at the actual package list, the large majority weren't in anything I control
 directly. `checkout-api` depends on exactly two runtime packages — `express` and
@@ -106,6 +110,8 @@ responding normally) — removing npm doesn't touch anything the app actually ca
 Result: **28 vulnerabilities across 3 packages** — 3 CRITICAL, 15 HIGH, 8 MEDIUM, 2 LOW.
 That's a reduction of more than half the total count and roughly 79% of the affected
 packages (14 → 3), without changing a single line of application code.
+<img width="946" height="167" alt="Vulnerabilities after scan" src="https://github.com/user-attachments/assets/a4eacc76-f1bb-45ab-bae4-4f764a3c8d28" />
+
 
 The remaining findings are all in **openssl**, part of the Alpine OS layer inside
 `node:20-alpine` itself — not something reachable by editing `package.json` or the
